@@ -64,11 +64,11 @@
             <a href="">
                 <h3>{{ blog.title }}</h3>
             </a>
-            {{ blog.pub_data }}
+            {{ blog.pub_data_pretty }}
             <br>
             <img src="{{blog.image.url}}    " name="avatar" class="img-fluid" height=200 width=200>
             <br>
-            <p> {{ blog.body }} </p>
+            <p> {{ blog.summary }} </p>
             {% endfor %}
 
         </div>
