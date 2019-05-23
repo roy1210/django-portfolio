@@ -14,13 +14,9 @@ import os
 import portfolio.local_settings
 
 # Hosting Server setting
+# make portfolio/server_settings.py in ubuntu
 # try:
-#     from server_settings.py import *
-# except ImportError:
-#     import portfolio.local_settings
-
-# try:
-#     import portfolio.local_settings
+#     import .portfolio.server_settings
 # except ImportError:
 #     pass
 
@@ -38,7 +34,7 @@ SECRET_KEY = portfolio.local_settings.SECRET_KEY
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = portfolio.local_settings.ALLOWED_HOSTS
 
 
 # Application definition
@@ -87,7 +83,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
+# POSTGRES
 DATABASES = portfolio.local_settings.DATABASES
 
 
