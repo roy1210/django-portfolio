@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Jekyll v3.8.5">
-    <title>Album example · Bootstrap</title>
+    <title>Shoe Kure</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/4.2/examples/album/">
 
@@ -35,7 +35,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand" href="#">Roy</a>
+            <a class="navbar-brand" href="{% url 'home' %}">Roy</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,10 +43,11 @@
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <!-- ml-auto: margin left auto -->
                 <div class="navbar-nav ml-auto">
-                    <a class="nav-item nav-link" href="#">Twitter </a>
+                    <a class="nav-item nav-link" href="https://www.linkedin.com/in/roy1210/" target="_blank">linkedin
+                    </a>
                     <a class="nav-item nav-link" href="{% static '180508 Resume Shoe Kure.pdf' %}"
                         target="_blank">Resume</a>
-                    <a class="nav-item nav-link" href="#">Blog</a>
+                    <a class="nav-item nav-link" href="{% url 'allblogs' %}">Blog</a>
                 </div>
             </div>
         </nav>
