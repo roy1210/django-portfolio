@@ -11,12 +11,13 @@ https://docs.djangoproject.com/en/2.1/ref/settings/
 """
 
 import os
+import portfolio.local_settings
 
 # Hosting Server setting
-try:
-    from server_settings.py import *
-except ImportError:
-    import portfolio.local_settings
+# try:
+#     from server_settings.py import *
+# except ImportError:
+#     import portfolio.local_settings
 
 # try:
 #     import portfolio.local_settings
@@ -87,16 +88,7 @@ WSGI_APPLICATION = 'portfolio.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfoliodb',
-        'USER': 'postgres',
-        'PASSWORD': portfolio.local_settings.POSTGRES_PASSWORD,
-        'HOST': 'localhost',
-        'PORT': '5432'
-    }
-}
+DATABASES = portfolio.local_settings.DATABASES
 
 
 # Password validation
