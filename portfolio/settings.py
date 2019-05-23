@@ -133,3 +133,9 @@ STATIC_URL = '/static/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 MEDIA_URL = '/media/'
+
+# Hosting Server setting
+try:
+    from server_settings.py import *
+except ImportError:
+    pass
